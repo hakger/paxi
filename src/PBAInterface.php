@@ -101,6 +101,19 @@ class PBAInterface implements LoggerAwareInterface
         return $this->xml_client->Execute($request);
     }
     
+    public function rebuildNotification(array $params = array())
+    {
+        $min_cnt = 2;
+        $this->checkCnt($params, $min_cnt);
+        $request = array(
+           'Server' => 'MESSAGE',
+           'Method' => 'RebuildNotification',
+           'Lang' => $this->lang,
+           'Params' => $params,
+        );
+        return $this->xml_client->Execute($request);
+    }
+           
     public function adjustAccountBalance(array $params = array())
     {
         $min_cnt = 2;
