@@ -20,7 +20,8 @@
   },
   "require-dev": {},
   "suggest": {
-    "monolog/monolog": "Allows more advanced logging of the application flow"
+    "monolog/monolog": "Allows more advanced logging of the application flow",
+    "gggeek/polyfill-xmlrpc": "For installs that do not use native ext-xmlrpc, use polyfill which provides same functionality as native extension"
   },
   "autoload": {
     "psr-4": {
