@@ -196,6 +196,13 @@ class POAInterface implements LoggerAwareInterface
         return $ret;
     }
 
+    public function getAccountDomains(array $params)          
+    {                                                         
+        $ret = $this->xmlClient()->getAccountDomains($params);
+        $this->checkRestStatus($ret);                         
+        return $ret;                                          
+    }                                                         
+    
     public function getAccountInfo(array $params)
     {
         $ret = $this->xmlClient()->getAccountInfo($params);
